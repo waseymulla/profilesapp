@@ -34,8 +34,7 @@ Amplify.configure(
 const client = generateClient<Schema>({
  authMode: "iam",
 });
-export const handler: PostConfirmationTriggerHandler = async (event)
-=> {
+export const handler: PostConfirmationTriggerHandler = async (event)=> {
  await client.graphql({
  query: createUserProfile,
  variables: {
